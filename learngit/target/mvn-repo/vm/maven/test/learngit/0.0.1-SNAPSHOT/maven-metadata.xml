@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata modelVersion="1.1.0">
+  <groupId>vm.maven.test</groupId>
+  <artifactId>learngit</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <versioning>
+    <snapshot>
+      <timestamp>20181206.224407</timestamp>
+      <buildNumber>1</buildNumber>
+    </snapshot>
+    <lastUpdated>20181206224407</lastUpdated>
+    <snapshotVersions>
+      <snapshotVersion>
+        <extension>jar</extension>
+        <value>0.0.1-20181206.224407-1</value>
+        <updated>20181206224407</updated>
+      </snapshotVersion>
+      <snapshotVersion>
+        <extension>pom</extension>
+        <value>0.0.1-20181206.224407-1</value>
+        <updated>20181206224407</updated>
+      </snapshotVersion>
+    </snapshotVersions>
+  </versioning>
+</metadata>
