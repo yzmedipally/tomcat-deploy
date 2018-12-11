@@ -31,9 +31,9 @@ pipeline {
 	      
              stage ("Four")
 	         	     {
-			workspacesetup()
+			
 		 steps {
-		   
+		         workspacesetup()
 		        script {
 			        
 			     if($Buildchoice == "Validate")
