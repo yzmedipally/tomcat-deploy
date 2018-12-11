@@ -54,7 +54,7 @@ pipeline {
 		    }
                       steps {
 		          script {
-			          else
+			          if($Buildchoice == "Clean")
 			        {
                                   bat  mvn clean
 				}
