@@ -24,15 +24,15 @@ Pipeline {
                        }
              }
              stage ("Four") {
-                        if($Buildchoice = "Validate")
+                        if($Buildchoice == "Validate")
 				{
                                        bat mvn validate
                         	}
-			else if($Buildchoice= "Compile")
+			else if($Buildchoice == "Compile")
 			{
 				bat mvn compile
 			}
-                        else if($Buildchoice = "Deploy")
+                        else if($Buildchoice == "Deploy")
                         {
                                 build VMothey_Test
                         }
