@@ -8,17 +8,20 @@ pipeline {
           stage ("Four")
 			 {
 			 			    
-			     if($Buildchoice == "Validate")
+			     if($Buildchoice == "Validate") 
+				 {
 				 steps {
 						step {
                                 bat 'mvn validate'
                         	}
-						else
+						else {
 						 step {
 							    bat 'mvn compile'
 							}
+						}
 							
                     }	
+				}
               }					
 			     
 			 
