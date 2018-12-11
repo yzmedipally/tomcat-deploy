@@ -30,12 +30,12 @@ pipeline {
 		        script {
 				if($Buildchoice == "Validate")
 				{
-				  bat mvn validate
+				  mvn validate
                         	}
 			
 		               if($Buildchoice == "Compile")
 			       {
-                                  bat mvn compile
+                                  mvn compile
 			        }
 		              if($Buildchoice == "Deploy")
 				{
@@ -43,7 +43,7 @@ pipeline {
 				}
 		             if($Buildchoice == "Clean")
 			        {
-                                  bat  mvn clean
+                                  mvn clean
 				}
 			  }
 		     }
