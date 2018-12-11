@@ -1,3 +1,4 @@
+
 pipeline {
    agent any
        stages {
@@ -30,19 +31,16 @@ pipeline {
 	      
              stage ("Four")
 	         	     {
+			
 		 steps {
 		   
 		        script {
 			        
-			//	def Path = "learngit"
-                        //        dir(Path)
-				
-				if($Buildchoice == "Validate")
+			     if($Buildchoice == "Validate")
 				{
-				 
+				 workspacesetup()
 				 bat 'mvn validate'
-				
-                        	}
+				}
 			
 		               if($Buildchoice == "Compile")
 			       {
@@ -52,7 +50,7 @@ pipeline {
 				{
                                 build 'VMothey_Test'
 				}
-		             if($Buildchoice == "Clean")
+		              if($Buildchoice == "Clean")
 			        {
                                  bat  'mvn clean'
 				}
@@ -61,3 +59,10 @@ pipeline {
 		}
            }
        }
+
+def workspacesetup()
+{
+  def workspace = "learngit";
+  dir (workspace)
+  
+ }
