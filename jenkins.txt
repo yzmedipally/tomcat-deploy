@@ -30,9 +30,10 @@ $Buildchoice = "Compile"
 bat mvn compile
 $Buildchoice = "Deploy"
 build VMothey_Test
-else
+not {
 steps {
       mvn clean
+}
 }
 }
   
