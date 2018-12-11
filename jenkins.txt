@@ -1,4 +1,4 @@
-Pipeline {
+pipeline {
    agent any
        statges {
           stage ("one") {
@@ -23,24 +23,25 @@ Pipeline {
                                echo "This is stage 3 print"
                        }
              }
-             stage ("Four") {
+             stage ("Four")
+			 {
                         if($Buildchoice == "Validate")
-				{
-                                       bat mvn validate
+							{
+                                bat mvn validate
                         	}
-			else if($Buildchoice == "Compile")
-			{
-				bat mvn compile
-			}
+						else if($Buildchoice == "Compile")
+							{
+								bat mvn compile
+							}
                         else if($Buildchoice == "Deploy")
-                        {
+							{
                                 build VMothey_Test
-                        }
+							}
                         else
-                        {
+							{
                               bat  mvn clean
-                        }
-              }
+							}
+			}
            }
        }
  
