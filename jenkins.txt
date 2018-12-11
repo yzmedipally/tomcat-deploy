@@ -39,7 +39,7 @@ pipeline {
 			        }
 		              if($Buildchoice == "Deploy")
 				{
-                                build VMothey_Test
+                                build 'VMothey_Test'
 				}
 		             if($Buildchoice == "Clean")
 			        {
