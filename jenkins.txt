@@ -25,9 +25,12 @@ pipeline {
                        }
              }
              stage ("Four")
-	     {
+	         	     {
+		  def Path = "learngit"
+		  dir(Path)
                  steps {
 		        script {
+			 
 				if($Buildchoice == "Validate")
 				{
 				 bat 'mvn validate'
