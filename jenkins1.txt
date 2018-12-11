@@ -8,6 +8,7 @@ pipeline {
           stage ("Four")
 			 {
 			 steps {
+			    step {
 			     if($Buildchoice == "Validate")
 							{
                                 bat 'mvn validate'
@@ -16,7 +17,8 @@ pipeline {
 							{
 								bat 'mvn compile'
 							}
-                    }							
+                    }	
+              }					
 			     
 			 
            }
