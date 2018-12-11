@@ -17,7 +17,7 @@ when {
        branch "master"
 }
 }
-else 
+
 steps {
 
       echo "This is stage 3 print"
