@@ -33,28 +33,15 @@ pipeline {
 				  bat mvn validate
                         	}
 			
-			}
-		}
-		   steps {
-		           script {
-			           if($Buildchoice == "Compile")
+		               if($Buildchoice == "Compile")
 			       {
                                   bat mvn compile
 			        }
-			    }
-	           }
-                  
-		    steps {
-		           script {
-			           if($Buildchoice == "Deploy")
+		              if($Buildchoice == "Deploy")
 				{
                                 build VMothey_Test
 				}
-			  }
-		    }
-                      steps {
-		          script {
-			          if($Buildchoice == "Clean")
+		             if($Buildchoice == "Clean")
 			        {
                                   bat  mvn clean
 				}
