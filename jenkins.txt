@@ -33,14 +33,15 @@ pipeline {
 		 steps {
 		   
 		        script {
-			 
+			        
+				def Path = "learngit"
+                                dir(Path)
+				
 				if($Buildchoice == "Validate")
 				{
-				 def Path = "learngit"
-                                 dir(Path)
-				step {
+				 
 				 bat 'mvn validate'
-				 }
+				
                         	}
 			
 		               if($Buildchoice == "Compile")
