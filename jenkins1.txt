@@ -1,5 +1,7 @@
 pipeline {
- 
+ agent any
+   {
+       stages {
    //   git "https://github.com/vijayendhar/learn-git.git"
      // def x = "learngit"
      // dir(x)
@@ -16,6 +18,7 @@ pipeline {
 							}			
 			     
 			 
-   //         }
+           }
       }
+	}
 }
