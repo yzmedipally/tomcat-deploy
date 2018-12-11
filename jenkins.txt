@@ -26,19 +26,19 @@ pipeline {
              }
              stage ("Four")
 	     {
-                        if($Buildchoice == "Validate");
+                        if($Buildchoice == "Validate")
 			
 			steps
 				{
                                 bat mvn validate
                         	}
-			else if($Buildchoice == "Compile");
+			else if($Buildchoice == "Compile")
 			
 			steps
 			       {
                                   bat mvn compile
 			        }
-                        else if($Buildchoice == "Deploy");
+                        else if($Buildchoice == "Deploy")
 			
 			steps
 				{
