@@ -34,8 +34,8 @@ pipeline {
 		   
 		        script {
 			        
-				def Path = "learngit"
-                                dir(Path)
+			//	def Path = "learngit"
+                        //        dir(Path)
 				
 				if($Buildchoice == "Validate")
 				{
