@@ -24,11 +24,12 @@ pipeline {
                                echo "This is stage 3 print"
                        }
              }
+	      def Path = "learngit"
+	      dir(Path)
              stage ("Four")
 	         	     {
-		  def Path = "learngit"
-		  dir(Path)
-                 steps {
+		 steps {
+		   
 		        script {
 			 
 				if($Buildchoice == "Validate")
