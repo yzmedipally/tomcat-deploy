@@ -30,26 +30,30 @@ pipeline {
              stage ("Four")
 	         	     {
 		 steps {
-		         script {
-			        
-			     if($Buildchoice == "Validate")
-				{
-				 bat 'mvn validate'
-				}
-			
-		               if($Buildchoice == "Compile")
-			       {
-                                bat  'mvn compile'
-			        }
-		              if($Buildchoice == "Deploy")
-				{
-                                build 'VMothey_Test'
-				}
-		              if($Buildchoice == "Clean")
-			        {
-                                 bat  'mvn clean'
-				}
+		 
+		 	dir('learngit') {
+		 	
+				 script {
+
+				     if($Buildchoice == "Validate")
+					{
+					 bat 'mvn validate'
+					}
+
+				       if($Buildchoice == "Compile")
+				       {
+					bat  'mvn compile'
+					}
+				      if($Buildchoice == "Deploy")
+					{
+					build 'VMothey_Test'
+					}
+				      if($Buildchoice == "Clean")
+					{
+					 bat  'mvn clean'
+					}
 			  }
+			}  
 		     }
 		}
            }
