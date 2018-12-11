@@ -26,29 +26,40 @@ pipeline {
              }
              stage ("Four")
 	     {
-                        if($Buildchoice == "Validate")
-			
-			steps
+                 steps {
+		        script {
+				if($Buildchoice == "Validate")
 				{
-                                bat mvn validate
+				  bat mvn validate
                         	}
-			else if($Buildchoice == "Compile")
 			
-			steps
+			}
+		}
+		   steps {
+		           script {
+			           if($Buildchoice == "Compile")
 			       {
                                   bat mvn compile
 			        }
-                        else if($Buildchoice == "Deploy")
-			
-			steps
+			    }
+	           }
+                  
+		    steps {
+		           script {
+			           if($Buildchoice == "Deploy")
 				{
                                 build VMothey_Test
 				}
-                        else
-			steps
+			  }
+		    }
+                      steps {
+		          script {
+			          else
 			        {
-                              bat  mvn clean
+                                  bat  mvn clean
 				}
+			  }
+		     }
 		}
            }
        }
