@@ -1,6 +1,6 @@
 pipeline {
    agent any
-       statges {
+       stages {
           stage ("one") {
                     steps {
                        echo "This is stage 1 print"
