@@ -1,0 +1,25 @@
+pipeline 
+{
+	agent any
+        stages
+		{
+           stage ("Four")
+		   {
+
+				steps 
+				{
+					step{
+							if($Buildchoice == "Validate") 
+								{
+									bat 'mvn validate'
+								}
+							else
+								{
+									bat 'mvn compile'
+								}
+						}
+				}	
+			}
+        }					
+			     
+}
