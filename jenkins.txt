@@ -1,6 +1,8 @@
 
 pipeline {
    agent any
+   
+   workspacesetup()
        stages {
    //    git "https://github.com/vijayendhar/learn-git.git"
    //    def Path = "learngit"
@@ -33,7 +35,7 @@ pipeline {
 	         	     {
 			
 		 steps {
-		         workspacesetup()
+		         
 		        script {
 			        
 			     if($Buildchoice == "Validate")
