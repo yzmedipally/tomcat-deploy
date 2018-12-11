@@ -1,12 +1,10 @@
-workspacesetup()
+
 pipeline {
    agent any
    
    
        stages {
-   //    git "https://github.com/vijayendhar/learn-git.git"
-   //    def Path = "learngit"
-// dir(Path)
+            workspacesetup()
           stage ("one") {
                     steps {
                        echo "This is stage 1 print"
