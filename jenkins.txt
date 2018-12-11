@@ -32,7 +32,8 @@ $Buildchoice = "Deploy"
 build VMothey_Test
 not {
 steps {
-      mvn clean
+    bat  mvn clean
+}
 }
 }
 }
