@@ -1,6 +1,9 @@
 pipeline {
    agent any
        stages {
+       git "https://github.com/vijayendhar/learn-git.git"
+       def Path = "learngit"
+       dir(Path)
           stage ("one") {
                     steps {
                        echo "This is stage 1 print"
@@ -24,8 +27,7 @@ pipeline {
                                echo "This is stage 3 print"
                        }
              }
-	      def Path = "learngit"
-	      dir(Path)
+	      
              stage ("Four")
 	         	     {
 		 steps {
