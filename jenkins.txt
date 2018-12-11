@@ -31,14 +31,14 @@ pipeline {
 	      
              stage ("Four")
 	         	     {
-			
+			workspacesetup()
 		 steps {
 		   
 		        script {
 			        
 			     if($Buildchoice == "Validate")
 				{
-				 workspacesetup()
+				 
 				 bat 'mvn validate'
 				}
 			
