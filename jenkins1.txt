@@ -1,9 +1,9 @@
 pipeline {
  
-      git "https://github.com/vijayendhar/learn-git.git"
-      def x = "learngit"
-      dir(x)
-      { 
+   //   git "https://github.com/vijayendhar/learn-git.git"
+     // def x = "learngit"
+     // dir(x)
+   //   { 
           stage ("Four")
 			 {
 			     if($Buildchoice == "Validate")
@@ -16,6 +16,6 @@ pipeline {
 							}			
 			     
 			 
-            }
+   //         }
       }
 }
