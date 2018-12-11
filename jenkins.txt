@@ -38,7 +38,9 @@ pipeline {
 				{
 				 def Path = "learngit"
                                  dir(Path)
+				step {
 				 bat 'mvn validate'
+				 }
                         	}
 			
 		               if($Buildchoice == "Compile")
