@@ -11,7 +11,8 @@ pipeline {
                          input("Do you want me to continue")
                      }
             }
-           stage ("Three") {
+           stage ("Three") 
+	   {
                         when {
                               not{ 
                                     branch "master"
@@ -24,24 +25,30 @@ pipeline {
                        }
              }
              stage ("Four")
-			 {
-                        if($Buildchoice == "Validate")
-							{
+	     {
+                        if($Buildchoice == "Validate");
+			
+			steps
+				{
                                 bat mvn validate
                         	}
-						else if($Buildchoice == "Compile")
-							{
-								bat mvn compile
-							}
-                        else if($Buildchoice == "Deploy")
-							{
+			else if($Buildchoice == "Compile");
+			
+			steps
+			       {
+                                  bat mvn compile
+			        }
+                        else if($Buildchoice == "Deploy");
+			
+			steps
+				{
                                 build VMothey_Test
-							}
+				}
                         else
-							{
+			steps
+			        {
                               bat  mvn clean
-							}
-			}
+				}
+		}
            }
        }
- 
